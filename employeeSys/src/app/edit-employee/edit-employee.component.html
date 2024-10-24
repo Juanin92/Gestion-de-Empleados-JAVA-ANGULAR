@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="container text-center" style="margin: 30px;">
+        <h3>Editar Empleado</h3>
+    </div>
+    <form (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="employee.name">
+  </div>
+  <div class="mb-3">
+    <label for="rut" class="form-label">Rut</label>
+    <input type="text" class="form-control" id="rut" name="rut" required="true" [(ngModel)]="employee.rut">
+  </div>
+  <div class="mb-3">
+    <label for="age" class="form-label">Edad</label>
+    <input type="number" class="form-control" id="age" name="age" [(ngModel)]="employee.age">
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email</label>
+    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="employee.email">
+  </div>
+  <div class="mb-3">
+    <label for="salary" class="form-label">Sueldo</label>
+    <input type="number" class="form-control" id="salary" name="salary" [(ngModel)]="employee.salary">
+  </div>
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary btn-sm me-3">Guardar</button>
+    <a href="/" class="btn btn-danger btn-sm">Regresar</a>
+  </div>
+</form>
+</div>

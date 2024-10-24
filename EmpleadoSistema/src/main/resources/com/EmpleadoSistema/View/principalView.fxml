@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpanePrincipal" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.EmpleadoSistema.controller.PrincipalController">
+   <children>
+      <Label layoutX="121.0" layoutY="33.0" text="Sistema de Empleados" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnRegisterView" layoutX="226.0" layoutY="99.0" mnemonicParsing="false" onAction="#employeeView" text="Registro Empleado" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Italic" size="15.0" />
+         </font>
+      </Button>
+      <TableView fx:id="listEmployee" layoutX="29.0" layoutY="165.0" prefHeight="200.0" prefWidth="544.0" visible="false">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Codigo" />
+          <TableColumn prefWidth="75.0" text="Nombre" />
+            <TableColumn prefWidth="75.0" text="Email" />
+            <TableColumn prefWidth="75.0" text="Sueldo" />
+            <TableColumn prefWidth="75.0" text="Estado" />
+            <TableColumn prefWidth="75.0" text="Ingreso" />
+            <TableColumn prefWidth="75.0" text="Acción" />
+        </columns>
+      </TableView>
+      <Label fx:id="lblMessage" layoutX="101.0" layoutY="246.0" text="No hay empleados registrados aun" textAlignment="CENTER" textFill="#cc2016" visible="false">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
