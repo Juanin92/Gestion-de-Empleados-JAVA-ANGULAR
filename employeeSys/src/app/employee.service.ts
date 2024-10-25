@@ -8,10 +8,14 @@ import { Employee } from './employee';
 })
 export class EmployeeService {
 
+  // URL base para las operaciones relacionadas con empleados
   private urlBase = "http://localhost:8080/EmployeeApp/Employee"
 
+  //HttpClient: Un servicio que permite realizar solicitudes HTTP (GET, POST, PUT, DELETE) a servidores.
   constructor(private httpClient: HttpClient) { }
 
+  // Observable: Un tipo de objeto que permite trabajar con valores que pueden llegar en el futuro, 
+  //especialmente útil en operaciones asíncronas como solicitudes HTTP.
   getEmployeeList(): Observable<Employee[]>{
     return this.httpClient.get<Employee[]>(this.urlBase);
   }
